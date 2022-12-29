@@ -6,6 +6,27 @@ public class Player : Actor
     private int jumpCount = 0;
     public int MaxJumpCount = 2;
 
+    [Export]
+    public float StompImpulse = 1000.0F;
+
+    private void _on_EnemyDetector_body_entered(PhysicsBody2D body){
+        GetTree().ReloadCurrentScene();
+    }
+
+    private void _on_EnemyDetector_area_entered(Area2D body){
+        
+        // GD.Print(
+        //     string.Format("enemy detected | {0:#0.000} | {1:#0.000}  ",
+        //         body.GlobalPosition.y, 
+        //         GetNode<Area2D>("EnemyDetector").GlobalPosition.y
+        //     )
+        // );
+
+        // if (body.GlobalPosition.y < GetNode<Area2D>("EnemyDetector").GlobalPosition.y)
+        //     { return; }
+        Velocity = CalculateStompVelocity(Velocity, StompImpulse);        
+    }
+
     public override void _PhysicsProcess(float delta)
     {
         var isJumpInterrupted = Input.IsActionJustReleased("jump") && Velocity.y < 0;
@@ -36,9 +57,14 @@ public class Player : Actor
             @out.y = 0;
         }
 
+        ////gravity maximum:
         //newVelocity.y = (velocity.y > speed.y) ? speed.y : velocity.y;
+        return @out;
+    }
 
-
+    private Vector2 CalculateStompVelocity(Vector2 linearVelocity, float stompImpulse){
+        var @out = new Vector2(linearVelocity);
+        @out.y = -stompImpulse;
         return @out;
     }
 }

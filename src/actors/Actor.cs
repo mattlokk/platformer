@@ -9,7 +9,7 @@ public class Actor : KinematicBody2D
     public Vector2 Speed = new Vector2(500, 500);
     
     [Export]
-    public float Gravity = 3000.0F;
+    public float Gravity = 6000.0F;
 
 
     public Vector2 Velocity = new Vector2();
