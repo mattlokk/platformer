@@ -1,0 +1,9 @@
+D:\dev\Platformer\.mono\temp\bin\Debug\Platformer.dll
+D:\dev\Platformer\.mono\temp\bin\Debug\Platformer.pdb
+D:\dev\Platformer\.mono\temp\obj\Debug\Platformer.csproj.AssemblyReference.cache
+D:\dev\Platformer\.mono\temp\obj\Debug\Platformer.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\Platformer\.mono\temp\obj\Debug\Platformer.AssemblyInfoInputs.cache
+D:\dev\Platformer\.mono\temp\obj\Debug\Platformer.AssemblyInfo.cs
+D:\dev\Platformer\.mono\temp\obj\Debug\Platformer.csproj.CoreCompileInputs.cache
+D:\dev\Platformer\.mono\temp\obj\Debug\Platformer.dll
+D:\dev\Platformer\.mono\temp\obj\Debug\Platformer.pdb
